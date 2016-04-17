@@ -53,8 +53,24 @@ class cameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     
     @IBAction func btnSave(sender: AnyObject) {
-        UIImageWriteToSavedPhotosAlbum(pictureShowed.image!, nil, nil, nil)
-        let alerta = UIAlertController(title: "It's Ok", message: "Picture saved", preferredStyle: <#T##UIAlertControllerStyle#>)
+        if (pictureShowed.image != nil ){
+            UIImageWriteToSavedPhotosAlbum(pictureShowed.image!, nil, nil, nil)
+            let alert = UIAlertController(title: "It's ok!", message: "Picture saved", preferredStyle: .Alert)
+            let actionOk = UIAlertAction(title: "OK", style: .Default, handler: {
+                action in
+                
+            })
+            alert.addAction(actionOk)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "error!", message: "Not picture saved", preferredStyle: .Alert)
+            let actionOk = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(actionOk)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+ 
+        
     }
     /*
     // MARK: - Navigation

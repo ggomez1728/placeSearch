@@ -10,12 +10,17 @@ import UIKit
 import CoreData
 
 
-
-
 class tableViewController: UITableViewController {
 
+    private var routes : Array<Array<String>> = Array<Array<String>>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "PlaceSearch"
+        self.routes.append(["ruta 1", "Detalle"])
+        self.routes.append(["ruta 2", "Detalle"])
+        self.routes.append(["ruta 3", "Detalle"])
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,23 +38,23 @@ class tableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.routes.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellRoute", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = self.routes[indexPath.row][0]
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
