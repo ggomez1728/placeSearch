@@ -20,6 +20,7 @@
 		824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669ED1CC341B200D2EAF1 /* qrViewController.swift */; };
 		824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EF1CC341EB00D2EAF1 /* detailViewController.swift */; };
 		824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F11CC349B400D2EAF1 /* webViewController.swift */; };
+		824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F31CC35A5800D2EAF1 /* cameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		824669ED1CC341B200D2EAF1 /* qrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrViewController.swift; sourceTree = "<group>"; };
 		824669EF1CC341EB00D2EAF1 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		824669F11CC349B400D2EAF1 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		824669F31CC35A5800D2EAF1 /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				824669EB1CC3310700D2EAF1 /* Route.swift */,
 				824669EF1CC341EB00D2EAF1 /* detailViewController.swift */,
 				824669F11CC349B400D2EAF1 /* webViewController.swift */,
+				824669F31CC35A5800D2EAF1 /* cameraViewController.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */,
 				824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */,
 				824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */,
+				824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */,
 				824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */,
 				824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */,
 			);

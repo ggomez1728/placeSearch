@@ -22,6 +22,9 @@ class detailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btnSaveRoute() {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation
