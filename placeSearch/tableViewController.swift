@@ -12,15 +12,19 @@ import CoreData
 
 class tableViewController: UITableViewController {
 
-    private var routes : Array<Array<String>> = Array<Array<String>>()
+    
+    private var routes : Array<Route> = Array<Route>()
+    var newRoute : Route? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "PlaceSearch"
-        self.routes.append(["ruta 1", "Detalle"])
-        self.routes.append(["ruta 2", "Detalle"])
-        self.routes.append(["ruta 3", "Detalle"])
         
+        if (newRoute != nil) {
+            self.routes.append(newRoute!)
+            print("Save new Route")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,7 +55,7 @@ class tableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellRoute", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = self.routes[indexPath.row][0]
+        cell.textLabel?.text = self.routes[indexPath.row].name
         return cell
     }
     
@@ -91,14 +95,21 @@ class tableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "idDetail"){
+            let cc = segue.destinationViewController as! detailViewController
+            let ip = self.tableView.indexPathForSelectedRow
+            cc.route = self.routes[ip!.row]
+        }
+        
+        
     }
-    */
+
 
 }

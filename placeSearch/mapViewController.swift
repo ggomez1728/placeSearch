@@ -105,7 +105,14 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         }))
 
         alert.addAction(UIAlertAction(title: "Finish Route", style: .Default, handler: { (action) -> Void in
-            self.finshRouteAction()
+            if(self.pointsTemp.count >= 2){
+                self.finshRouteAction()
+            }
+            else{
+                let alert = UIAlertController(title: "Invalid Request", message: "You need more favorite points", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
@@ -114,10 +121,12 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    
     func finshRouteAction() {
         dispatch_async(dispatch_get_main_queue()) {
             //perform code
             let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? detailViewController
+            nextViewController!.favoritePoints = self.pointsTemp
             self.navigationController?.pushViewController(nextViewController!, animated: true)
         }
     }
@@ -168,6 +177,7 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     }
     
     func addPoint( punto: MKMapItem){
+        pointsTemp.append(punto)
         let anota = MKPointAnnotation()
         anota.coordinate = punto.placemark.coordinate
         anota.title = punto.name

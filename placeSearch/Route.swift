@@ -12,13 +12,13 @@ import MapKit
 
 struct Route {
     var name : String
-    var Description : String
-    var Points : [MKMapItem]
+    var description : String
+    var points : [MKMapItem]
     var image : UIImage?
-    init(name : String, Description : String, Points : [MKMapItem], image : UIImage? ){
+    init(name : String, description : String, points : [MKMapItem], image : UIImage? ){
         self.name = name
-        self.Description = Description
-        self.Points = Points
+        self.description = description
+        self.points = points
         if (image != nil){
             self.image = image!
         }
