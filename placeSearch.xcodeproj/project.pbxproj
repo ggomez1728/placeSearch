@@ -14,6 +14,9 @@
 		824669CF1CC323A300D2EAF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824669CE1CC323A300D2EAF1 /* Assets.xcassets */; };
 		824669D21CC323A300D2EAF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824669D01CC323A300D2EAF1 /* LaunchScreen.storyboard */; };
 		824669DD1CC323A800D2EAF1 /* placeSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669DC1CC323A800D2EAF1 /* placeSearchTests.swift */; };
+		824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E71CC3254B00D2EAF1 /* mapViewController.swift */; };
+		824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E91CC32E8D00D2EAF1 /* tableViewController.swift */; };
+		824669EC1CC3310700D2EAF1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EB1CC3310700D2EAF1 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		824669D81CC323A800D2EAF1 /* placeSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = placeSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		824669DC1CC323A800D2EAF1 /* placeSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeSearchTests.swift; sourceTree = "<group>"; };
 		824669DE1CC323A800D2EAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824669E71CC3254B00D2EAF1 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		824669E91CC32E8D00D2EAF1 /* tableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
+		824669EB1CC3310700D2EAF1 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 				824669D01CC323A300D2EAF1 /* LaunchScreen.storyboard */,
 				824669D31CC323A500D2EAF1 /* Info.plist */,
 				824669CB1CC323A300D2EAF1 /* placeSearch.xcdatamodeld */,
+				824669E71CC3254B00D2EAF1 /* mapViewController.swift */,
+				824669E91CC32E8D00D2EAF1 /* tableViewController.swift */,
+				824669EB1CC3310700D2EAF1 /* Route.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -205,6 +214,9 @@
 				824669C71CC323A100D2EAF1 /* ViewController.swift in Sources */,
 				824669C51CC323A100D2EAF1 /* AppDelegate.swift in Sources */,
 				824669CD1CC323A300D2EAF1 /* placeSearch.xcdatamodeld in Sources */,
+				824669EC1CC3310700D2EAF1 /* Route.swift in Sources */,
+				824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */,
+				824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
