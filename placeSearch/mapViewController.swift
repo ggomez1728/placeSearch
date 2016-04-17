@@ -72,6 +72,58 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     }
     */
     
+
+    
+    @IBAction func btnNewPoint(sender: AnyObject) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "New favorite point in route", message: "Add New Point:", preferredStyle: .Alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.placeholder = "Name of Point"
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks Add Point.
+        alert.addAction(UIAlertAction(title: "Add Point", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            let textField = alert.textFields![0] as UITextField
+            if(textField.text != ""){
+                self.myManager.stopUpdatingLocation()
+                let puntoCoor = CLLocationCoordinate2DMake(self.locationLatitude!, self.locationLongitude!)
+                let puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+                let origen =  MKMapItem(placemark: puntoLugar)
+                origen.name = "\(textField.text!)"
+                //Add point
+                self.addPoint(origen)
+                self.myManager.startUpdatingLocation()
+            }
+            else{
+                let alert = UIAlertController(title: "Invalid Request", message: "You have not filled fields", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            
+        }))
+
+        alert.addAction(UIAlertAction(title: "Finish Route", style: .Default, handler: { (action) -> Void in
+            self.finshRouteAction()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func finshRouteAction() {
+        dispatch_async(dispatch_get_main_queue()) {
+            //perform code
+            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? detailViewController
+            self.navigationController?.pushViewController(nextViewController!, animated: true)
+        }
+    }
+    
+    
+    
     //Funfiones para creacion de rutas
     
     func getNewRoute(origen: MKMapItem, destino: MKMapItem){
@@ -121,50 +173,5 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         anota.title = punto.name
         mapRoute.addAnnotation(anota)
     }
-    
-    @IBAction func btnNewPoint(sender: AnyObject) {
-        //1. Create the alert controller.
-        let alert = UIAlertController(title: "New favorite point in route", message: "Add New Point:", preferredStyle: .Alert)
-        
-        //2. Add the text field. You can configure it however you need.
-        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-            textField.placeholder = "Name of Point"
-        })
-        
-        //3. Grab the value from the text field, and print it when the user clicks Add Point.
-        alert.addAction(UIAlertAction(title: "Add Point", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            let textField = alert.textFields![0] as UITextField
-            if(textField.text != ""){
-                self.myManager.stopUpdatingLocation()
-                let puntoCoor = CLLocationCoordinate2DMake(self.locationLatitude!, self.locationLongitude!)
-                let puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
-                let origen =  MKMapItem(placemark: puntoLugar)
-                origen.name = "\(textField.text!)"
-                //Add point
-                self.addPoint(origen)
-                self.myManager.startUpdatingLocation()
-            }
-            else{
-                let alert = UIAlertController(title: "Invalid Request", message: "You have not filled fields", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            }
-            
-        }))
-
-        alert.addAction(UIAlertAction(title: "Finish Route", style: .Default, handler: { (action) -> Void in
-            let textField = alert.textFields![0] as UITextField
-            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? detailViewController
-            self.navigationController?.pushViewController(nextViewController!, animated: true)
-            //print("Text field: \(textField.text)")
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-
-        // 4. Present the alert.
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    
     
 }

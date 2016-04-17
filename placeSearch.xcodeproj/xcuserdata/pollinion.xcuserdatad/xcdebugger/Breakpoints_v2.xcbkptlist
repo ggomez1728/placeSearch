@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "placeSearch/mapViewController.swift"
-            timestampString = "482555999.374396"
+            timestampString = "482560599.307198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "btnNewPoint(_:)"
             landmarkType = "5">
          </BreakpointContent>
