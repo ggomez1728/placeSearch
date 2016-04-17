@@ -115,6 +115,13 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         return renderer
     }
     
+    func addPoint( punto: MKMapItem){
+        let anota = MKPointAnnotation()
+        anota.coordinate = punto.placemark.coordinate
+        anota.title = punto.name
+        mapRoute.addAnnotation(anota)
+    }
+    
     @IBAction func btnNewPoint(sender: AnyObject) {
         //1. Create the alert controller.
         let alert = UIAlertController(title: "New favorite point in route", message: "Add New Point:", preferredStyle: .Alert)
@@ -128,12 +135,14 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         alert.addAction(UIAlertAction(title: "Add Point", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             if(textField.text != ""){
-                
-                let puntoCoor = CLLocationCoordinate2DMake(19.359727, -99.257700)
+                self.myManager.stopUpdatingLocation()
+                let puntoCoor = CLLocationCoordinate2DMake(self.locationLatitude!, self.locationLongitude!)
                 let puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
                 let origen =  MKMapItem(placemark: puntoLugar)
-                origen.name = "Tecnologico de Monterrey"
-                print("Text field: \(textField.text)")
+                origen.name = "\(textField.text!)"
+                //Add point
+                self.addPoint(origen)
+                self.myManager.startUpdatingLocation()
             }
             else{
                 let alert = UIAlertController(title: "Invalid Request", message: "You have not filled fields", preferredStyle: UIAlertControllerStyle.Alert)
@@ -145,6 +154,8 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
 
         alert.addAction(UIAlertAction(title: "Finish Route", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
+            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? detailViewController
+            self.navigationController?.pushViewController(nextViewController!, animated: true)
             //print("Text field: \(textField.text)")
         }))
         

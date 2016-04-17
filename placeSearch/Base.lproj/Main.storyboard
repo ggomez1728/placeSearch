@@ -21,6 +21,24 @@
             </objects>
             <point key="canvasLocation" x="286" y="513"/>
         </scene>
+        <!--Qr View Controller-->
+        <scene sceneID="t6z-et-RAc">
+            <objects>
+                <viewController id="9bm-Ec-faG" customClass="qrViewController" customModule="placeSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZrQ-Ui-IXr"/>
+                        <viewControllerLayoutGuide type="bottom" id="tr5-df-6qU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eay-TU-qdj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F47-Bd-5U3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="513"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="yWq-cn-P9s">
             <objects>
@@ -40,9 +58,15 @@
                                 <rect key="frame" x="0.0" y="555" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QPz-Kq-i1O"/>
-                                    <barButtonItem systemItem="compose" id="RiN-Np-eMr">
+                                    <barButtonItem title="QR-Code" id="RiN-Np-eMr">
                                         <connections>
-                                            <action selector="btnNewPoint:" destination="Wi9-SH-22F" id="wX9-YW-lLN"/>
+                                            <segue destination="9bm-Ec-faG" kind="show" id="ewj-ih-eiW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ELn-b2-2l0"/>
+                                    <barButtonItem systemItem="compose" id="WKS-s9-tUu">
+                                        <connections>
+                                            <action selector="btnNewPoint:" destination="Wi9-SH-22F" id="bpu-J6-ghE"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="APo-JN-boX"/>
@@ -68,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wha-yg-3mK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="-163"/>
+            <point key="canvasLocation" x="1713" y="-269"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vyf-At-vgt">
@@ -94,7 +118,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="nFt-3y-OhA">
-                        <barButtonItem key="leftBarButtonItem" title="Qr-Reader" id="4yO-uX-cOU"/>
+                        <barButtonItem key="leftBarButtonItem" title="Qr-Reader" id="4yO-uX-cOU">
+                            <connections>
+                                <segue destination="9bm-Ec-faG" kind="show" id="fSw-tI-Sc8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create Route" id="cTn-ie-YzP">
                             <connections>
                                 <segue destination="Wi9-SH-22F" kind="show" id="cma-bR-AEA"/>
@@ -104,12 +132,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jt-BA-Tui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="513"/>
+            <point key="canvasLocation" x="1000" y="513"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="1oV-KK-oyf">
             <objects>
-                <viewController id="b0q-Fr-jVz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b0q-Fr-jVz" customClass="detailViewController" customModule="placeSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dXP-fT-13Z"/>
                         <viewControllerLayoutGuide type="bottom" id="mxf-VQ-UTc"/>
@@ -119,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8D2-o1-ijK">
-                                <rect key="frame" x="163" y="253" width="97" height="30"/>
+                                <rect key="frame" x="139" y="98" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -132,4 +160,7 @@
             <point key="canvasLocation" x="1701" y="513"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ewj-ih-eiW"/>
+    </inferredMetricsTieBreakers>
 </document>

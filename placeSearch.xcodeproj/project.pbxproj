@@ -17,6 +17,8 @@
 		824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E71CC3254B00D2EAF1 /* mapViewController.swift */; };
 		824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E91CC32E8D00D2EAF1 /* tableViewController.swift */; };
 		824669EC1CC3310700D2EAF1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EB1CC3310700D2EAF1 /* Route.swift */; };
+		824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669ED1CC341B200D2EAF1 /* qrViewController.swift */; };
+		824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EF1CC341EB00D2EAF1 /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		824669E71CC3254B00D2EAF1 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		824669E91CC32E8D00D2EAF1 /* tableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		824669EB1CC3310700D2EAF1 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		824669ED1CC341B200D2EAF1 /* qrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrViewController.swift; sourceTree = "<group>"; };
+		824669EF1CC341EB00D2EAF1 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				824669C41CC323A100D2EAF1 /* AppDelegate.swift */,
+				824669ED1CC341B200D2EAF1 /* qrViewController.swift */,
 				824669C61CC323A100D2EAF1 /* ViewController.swift */,
 				824669C81CC323A200D2EAF1 /* Main.storyboard */,
 				824669CE1CC323A300D2EAF1 /* Assets.xcassets */,
@@ -95,6 +100,7 @@
 				824669E71CC3254B00D2EAF1 /* mapViewController.swift */,
 				824669E91CC32E8D00D2EAF1 /* tableViewController.swift */,
 				824669EB1CC3310700D2EAF1 /* Route.swift */,
+				824669EF1CC341EB00D2EAF1 /* detailViewController.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -216,7 +222,9 @@
 				824669CD1CC323A300D2EAF1 /* placeSearch.xcdatamodeld in Sources */,
 				824669EC1CC3310700D2EAF1 /* Route.swift in Sources */,
 				824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */,
+				824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */,
 				824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */,
+				824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
