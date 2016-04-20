@@ -8,19 +8,30 @@
 
 import UIKit
 
+protocol DestinationViewControllerDelegate {
+    func doSomethingWithData(data: UIImage)
+}
+
 class cameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+
     @IBOutlet weak var pictureShowed: UIImageView!
     @IBOutlet weak var btnCameraOutlet: UIBarButtonItem!
     
     private let myPicker = UIImagePickerController()
+    var pictureForRoute: Bool = false
     
+    var delegate: DestinationViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if !UIImagePickerController.isSourceTypeAvailable(.Camera){
             btnCameraOutlet.enabled = false
+            let alert = UIAlertController(title: "Hardware failure", message: "La cámara no se encuentra", preferredStyle: .Alert)
+            let actionOk = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(actionOk)
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         myPicker.delegate = self
         
@@ -51,17 +62,24 @@ class cameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     @IBAction func btnSave(sender: AnyObject) {
         if (pictureShowed.image != nil ){
-            UIImageWriteToSavedPhotosAlbum(pictureShowed.image!, nil, nil, nil)
-            let alert = UIAlertController(title: "It's ok!", message: "Picture saved", preferredStyle: .Alert)
-            let actionOk = UIAlertAction(title: "OK", style: .Default, handler: {
-                action in
+            if(pictureForRoute == true){
                 
-            })
-            alert.addAction(actionOk)
-            self.presentViewController(alert, animated: true, completion: nil)
+                navigationController?.popViewControllerAnimated(true)
+                delegate?.doSomethingWithData(pictureShowed.image!)
+
+            }
+            else{
+                UIImageWriteToSavedPhotosAlbum(pictureShowed.image!, nil, nil, nil)
+                let alert = UIAlertController(title: "It's ok!", message: "Picture saved", preferredStyle: .Alert)
+                let actionOk = UIAlertAction(title: "OK", style: .Default, handler: {
+                    action in
+                    
+                })
+                alert.addAction(actionOk)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
         else {
             let alert = UIAlertController(title: "error!", message: "Not picture saved", preferredStyle: .Alert)

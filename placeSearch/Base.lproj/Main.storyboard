@@ -44,8 +44,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.67843137249999996" green="0.76078431369999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="N7p-j3-gBH" secondAttribute="bottom" constant="20" symbolic="YES" id="4e9-iI-Ypr"/>
-                            <constraint firstItem="N7p-j3-gBH" firstAttribute="centerX" secondItem="Eay-TU-qdj" secondAttribute="centerX" id="M5H-9T-SXa"/>
+                            <constraint firstItem="N7p-j3-gBH" firstAttribute="centerX" secondItem="Eay-TU-qdj" secondAttribute="centerX" id="2yx-hZ-dLA"/>
+                            <constraint firstAttribute="bottom" secondItem="N7p-j3-gBH" secondAttribute="bottom" constant="20" symbolic="YES" id="IkS-Lt-w6O"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -92,16 +92,25 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KBT-C6-Zzx"/>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-3u-O4A">
+                                <rect key="frame" x="506" y="511" width="84" height="30"/>
+                                <state key="normal" title="My Location"/>
+                                <connections>
+                                    <action selector="btnMyLocation" destination="Wi9-SH-22F" eventType="touchUpInside" id="7dk-7y-wxS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="vio-NV-fLr" secondAttribute="leading" id="1Bl-um-IiU"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="top" secondItem="dLX-uP-Xaa" secondAttribute="bottom" id="ENV-ue-No8"/>
-                            <constraint firstItem="qjV-re-leV" firstAttribute="leading" secondItem="mmf-cq-sNg" secondAttribute="leading" id="JIg-rc-ihX"/>
-                            <constraint firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="RNf-gg-lot"/>
-                            <constraint firstItem="A7O-cw-gOI" firstAttribute="top" secondItem="qjV-re-leV" secondAttribute="bottom" constant="1" id="Vop-Po-muU"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="bottom" secondItem="A7O-cw-gOI" secondAttribute="top" id="xh7-KJ-9QQ"/>
-                            <constraint firstItem="qjV-re-leV" firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="ym2-Ps-Qp4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lyM-3u-O4A" secondAttribute="trailing" constant="-10" id="0ZL-Dv-x3v"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="top" secondItem="dLX-uP-Xaa" secondAttribute="bottom" id="0pn-uD-z5H"/>
+                            <constraint firstItem="qjV-re-leV" firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="2cm-dI-F7D"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="qjV-re-leV" secondAttribute="leading" id="4y5-6h-cFL"/>
+                            <constraint firstItem="qjV-re-leV" firstAttribute="top" secondItem="lyM-3u-O4A" secondAttribute="bottom" constant="14" id="8OM-wg-3ey"/>
+                            <constraint firstItem="A7O-cw-gOI" firstAttribute="top" secondItem="qjV-re-leV" secondAttribute="bottom" constant="1" id="H0h-QH-D52"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="bottom" secondItem="A7O-cw-gOI" secondAttribute="top" id="PN3-gm-Z7H"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="vio-NV-fLr" secondAttribute="leading" id="Zif-ia-Nob"/>
+                            <constraint firstAttribute="trailing" secondItem="qjV-re-leV" secondAttribute="trailing" id="c1T-R0-BHq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -187,7 +196,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZq-O5-AiH">
                                 <rect key="frame" x="20" y="20" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrd-lt-rFz">
@@ -284,26 +293,6 @@
                                     <constraint firstAttribute="height" constant="206" id="Rlz-V2-UGy"/>
                                 </constraints>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbm-US-5wn">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dyy-UD-IfK"/>
-                                    <barButtonItem title="Show" id="vP9-Jl-Rxw">
-                                        <connections>
-                                            <action selector="btnShowRoute:" destination="b0q-Fr-jVz" id="ehu-mT-UhW"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Acw-Zl-XYL"/>
-                                    <barButtonItem systemItem="camera" id="gxk-3Z-JU5"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mrY-Gs-sR2"/>
-                                    <barButtonItem title="Save Route" systemItem="save" id="BpG-xf-XU5">
-                                        <connections>
-                                            <action selector="btnSaveRoute:" destination="b0q-Fr-jVz" id="bzv-Vl-ANI"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iax-Us-l1K"/>
-                                </items>
-                            </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="70e-NY-nhS">
                                 <rect key="frame" x="180" y="133" width="240" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -313,10 +302,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h82-eq-aWD">
-                                <rect key="frame" x="279" y="452" width="42" height="30"/>
-                                <state key="normal" title="Paseo"/>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fbm-US-5wn">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dyy-UD-IfK"/>
+                                    <barButtonItem title="Transport " id="vP9-Jl-Rxw">
+                                        <connections>
+                                            <action selector="btnShowRoute:" destination="b0q-Fr-jVz" id="ehu-mT-UhW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Acw-Zl-XYL"/>
+                                    <barButtonItem systemItem="camera" id="gxk-3Z-JU5">
+                                        <connections>
+                                            <action selector="getPicture:" destination="b0q-Fr-jVz" id="l6T-eN-9lL"/>
+                                            <segue destination="QtN-00-6vK" kind="show" identifier="idCamera" id="acX-FV-SyI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mrY-Gs-sR2"/>
+                                    <barButtonItem title="Save" id="BpG-xf-XU5">
+                                        <connections>
+                                            <action selector="btnSaveRoute:" destination="b0q-Fr-jVz" id="bzv-Vl-ANI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iax-Us-l1K"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.67843137249999996" green="0.76078431369999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -334,10 +344,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnSave" destination="BpG-xf-XU5" id="8tW-Si-QOU"/>
+                        <outlet property="btnAction" destination="BpG-xf-XU5" id="924-XY-rnI"/>
                         <outlet property="btnShow" destination="vP9-Jl-Rxw" id="Shv-FY-YVp"/>
                         <outlet property="descriptionRoute" destination="70e-NY-nhS" id="MsA-Vh-zsk"/>
-                        <outlet property="titleRoute" destination="8D2-o1-ijK" id="mk3-sE-mI9"/>
+                        <outlet property="pictureShow" destination="V7o-3m-7qg" id="xzz-ON-yZX"/>
+                        <outlet property="titleRoute" destination="8D2-o1-ijK" id="QzL-ZX-fxi"/>
                         <outlet property="toolbarRoute" destination="Fbm-US-5wn" id="vyd-tb-47f"/>
                     </connections>
                 </viewController>
@@ -348,5 +359,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fSw-tI-Sc8"/>
+        <segue reference="acX-FV-SyI"/>
     </inferredMetricsTieBreakers>
 </document>

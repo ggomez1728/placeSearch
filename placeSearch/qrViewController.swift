@@ -69,21 +69,21 @@ class qrViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             marcoQR?.frame = objBordes.bounds
             if(objMetadato.stringValue != nil){
                 self.urls = objMetadato.stringValue
-                let navc = self.navigationController
-                navc?.performSegueWithIdentifier("webViewController", sender: self)
+                self.sesion?.stopRunning()
+                setQtData(self.urls!)
               
             }
         }
     }
 
     @IBAction func testeo(sender: AnyObject) {
-        
+       setQtData("http://www.coursera.org/")
+    }
+    
+    func setQtData(urlDate : String){
         let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("webViewController") as? webViewController
-        nextViewController!.urls = "https://www.coursera.org/"
-        
+        nextViewController!.urls = urlDate
         self.navigationController?.pushViewController(nextViewController!, animated: true)
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

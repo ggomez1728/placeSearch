@@ -15,8 +15,8 @@ class tableViewController: UITableViewController {
     
     private var routes : Array<Route> = Array<Route>()
     var newRoute : Route? = nil
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "PlaceSearch"
@@ -107,9 +107,6 @@ class tableViewController: UITableViewController {
             let ip = self.tableView.indexPathForSelectedRow
             cc.route = self.routes[ip!.row]
         }
-        
-        
     }
-
-
+    
 }

@@ -19,19 +19,56 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     var locationLatitude:Double?
     var locationLongitude:Double?
 
+    var route : Route? = nil
+
+    var fistFocus : Bool = true
 
     private let myManager = CLLocationManager()
+    
+    
+    
+    private var origen: MKMapItem!
+    private var destino: MKMapItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Map"
-        
         mapRoute.delegate = self
         myManager.delegate = self
         myManager.desiredAccuracy = kCLLocationAccuracyBest
         myManager.requestWhenInUseAuthorization()
         myManager.startUpdatingLocation()
+        /*
+        var puntoCoor = CLLocationCoordinate2DMake(19.359727, -99.257700)
+        var puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+        origen =  MKMapItem(placemark: puntoLugar)
+        origen.name = "Tecnologico de Monterrey"
+        puntoCoor = CLLocationCoordinate2DMake(19.362896, -99.268856)
+        puntoLugar =  MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+        destino = MKMapItem(placemark: puntoLugar)
+        destino.name = "Centro Comercial"
+        self.addPoint(origen!)
+        self.addPoint(destino!)
+        self.getNewRoute(self.origen!, destino: self.destino!)
+
+        */
+    }
+    
+    func showRoute(route : Route){
+        dispatch_async(dispatch_get_main_queue()) {
+            //load my position
+         
+            let puntoCoor = CLLocationCoordinate2DMake(self.locationLatitude!, self.locationLongitude!)
+            let puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+            var firstPoint = MKMapItem(placemark: puntoLugar)
+            for point in route.points {
+                self.addPoint(point)
+                self.getNewRoute(firstPoint, destino: point)
+                firstPoint = point
+            }
+        }
         
     }
     
@@ -56,11 +93,22 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         let location = locations.last! as CLLocation
         self.locationLatitude = location.coordinate.latitude
         self.locationLongitude = location.coordinate.longitude
+        if fistFocus == true {
+            fistFocus = false
+            self.btnMyLocation()
+            if (self.route != nil){
+                print("mostrar ruta")
+                showRoute(self.route!)
+            }
+
+        }
+    }
+    
+    @IBAction func btnMyLocation() {
         let pointLocation = CLLocationCoordinate2DMake(self.locationLatitude!, self.locationLongitude! )
         let puntoLugar = MKPlacemark(coordinate: pointLocation, addressDictionary: nil)
         focusPointInMap(MKMapItem(placemark: puntoLugar))
     }
-    
     
     /*
     // MARK: - Navigation
@@ -144,13 +192,16 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         indicaciones.calculateDirectionsWithCompletionHandler({
             (respuesta: MKDirectionsResponse?, error: NSError?) in
             if error != nil{
-                print("Error al Optener la ruta")
+                let alert = UIAlertController(title: "Fail Request", message: "You don't get have not filled fields", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
             }
             else{
                 self.ShowNewRoute(respuesta!)
             }
         })
     }
+    
     func focusPointInMap(point : MKMapItem){
         let centro = point.placemark.coordinate
         let region = MKCoordinateRegionMakeWithDistance(centro, 1000, 1000)
