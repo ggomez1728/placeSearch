@@ -10,12 +10,17 @@ import UIKit
 import CoreData
 
 
+
 class tableViewController: UITableViewController {
 
     
     private var routes : Array<Route> = Array<Route>()
     var newRoute : Route? = nil
 
+    func doSaveRouteWithData(data: Route) {
+        print("Guarda bien")
+        // Uses the data passed back
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

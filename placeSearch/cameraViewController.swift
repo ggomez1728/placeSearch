@@ -65,10 +65,8 @@ class cameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func btnSave(sender: AnyObject) {
         if (pictureShowed.image != nil ){
             if(pictureForRoute == true){
-                
                 navigationController?.popViewControllerAnimated(true)
                 delegate?.doSomethingWithData(pictureShowed.image!)
-
             }
             else{
                 UIImageWriteToSavedPhotosAlbum(pictureShowed.image!, nil, nil, nil)
