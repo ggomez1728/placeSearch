@@ -20,6 +20,7 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     var locationLongitude:Double?
 
     var route : Route? = nil
+    
 
     var fistFocus : Bool = true
 

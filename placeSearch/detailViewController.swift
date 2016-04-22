@@ -143,14 +143,14 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
     }
     
     func saveRouteAction(route : Route) {
-        //navigationController?.popToRootViewControllerAnimated(true)
+        // navigationController?.popToRootViewControllerAnimated(true)
         dispatch_async(dispatch_get_main_queue()) {
             //perform code
             let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("tableViewController") as? tableViewController
             nextViewController!.newRoute = route
             self.navigationController?.pushViewController(nextViewController!, animated: true)
         }
-}
+    }
     
     func showRouteAction(route : Route) {
         dispatch_async(dispatch_get_main_queue()) {

@@ -251,11 +251,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="nFt-3y-OhA">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Qr-Reader" id="4yO-uX-cOU">
                             <connections>
                                 <segue destination="9bm-Ec-faG" kind="show" id="fSw-tI-Sc8"/>
                             </connections>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="43Z-8E-Mqj">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="testeooo:" destination="Mqs-bN-86X" eventType="touchUpInside" id="8Mk-7l-N0P"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="Create Route" id="cTn-ie-YzP">
                             <connections>
                                 <segue destination="Wi9-SH-22F" kind="show" id="cma-bR-AEA"/>

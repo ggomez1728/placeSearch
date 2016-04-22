@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchPlaceSearch" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Label" textAlignment="center" id="oRb-P1-xGB"/>
+                        <button width="1" alignment="left" title="Show Routes" id="a2m-lk-sV8">
+                            <connections>
+                                <segue destination="BG8-ds-7q3" kind="push" id="zr4-h5-884"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="7rf-G1-Ik3"/>
+                        <button width="1" alignment="left" title="About us" id="vrD-c1-kaQ"/>
+                    </items>
+                    <connections>
+                        <outlet property="messageLabel" destination="oRb-P1-xGB" id="eXD-Kz-Kan"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="163" y="159"/>
+        </scene>
+        <!--idTableWK-->
+        <scene sceneID="l8o-Et-fBP">
+            <objects>
+                <controller identifier="idTableWK" id="BG8-ds-7q3" customClass="tableInterfaceController" customModule="watchPlaceSearch_Extension">
+                    <items>
+                        <table alignment="left" id="hs0-Br-j19">
+                            <items>
+                                <tableRow identifier="routeRow" id="l78-EG-p9c" customClass="RouteRowView" customModule="watchPlaceSearch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="9qV-tG-nBE">
+                                        <items>
+                                            <imageView width="0.25" height="1" alignment="left" id="5tS-YX-2EM"/>
+                                            <label width="95.5" height="65.5" alignment="left" text="Label" id="5v8-n0-DyC">
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.3411764705882353" green="0.75294117647058822" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="itemImage" destination="5tS-YX-2EM" id="5Lh-ff-Cae"/>
+                                        <outlet property="itemLabel" destination="5v8-n0-DyC" id="47z-wx-Mex"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="hs0-Br-j19" id="pOD-h7-2kW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="373" y="159"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="wPf-AV-bMu">
+            <objects>
+                <controller id="Zog-kS-iWn"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="392"/>
+        </scene>
+        <!--idDetailWk-->
+        <scene sceneID="eGN-Rq-dKU">
+            <objects>
+                <controller identifier="idDetailWk" id="g5w-Lu-SBz" customClass="detailInterfaceController" customModule="watchPlaceSearch_Extension">
+                    <items>
+                        <group width="1" height="98" alignment="left" layout="vertical" id="jzF-Jh-bPx">
+                            <items>
+                                <label alignment="center" text="name of route" textAlignment="center" id="Gql-0c-ufB">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <imageView width="0.5" height="66.5" alignment="center" id="ueI-Vn-vR9"/>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="OK5-mI-Oan"/>
+                        <group width="1" alignment="left" layout="vertical" id="TDb-bF-Qg2">
+                            <items>
+                                <label alignment="center" text="Favorite Points" textAlignment="center" id="fB9-dJ-wJN">
+                                    <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                                </label>
+                                <table alignment="left" id="8qF-1i-sBg">
+                                    <items>
+                                        <tableRow identifier="pointRow" id="1MR-bM-pjQ" customClass="PointRowView" customModule="watchPlaceSearch_Extension">
+                                            <group key="rootItem" width="1" alignment="left" id="P70-Eo-Ry6">
+                                                <items>
+                                                    <label width="136" height="39.5" alignment="left" text="Label" id="U99-ST-3vf">
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </group>
+                                            <connections>
+                                                <outlet property="itemLabel" destination="U99-ST-3vf" id="w0d-vf-2TS"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="nameRoute" destination="Gql-0c-ufB" id="RHh-ag-F7B"/>
+                        <outlet property="tableView" destination="8qF-1i-sBg" id="CIW-mn-GoR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="552" y="168.5"/>
+        </scene>
+        <!--idMap-->
+        <scene sceneID="ZhX-NY-7hm">
+            <objects>
+                <controller identifier="idMap" id="W6W-16-xOs" customClass="mapInterfaceController" customModule="watchPlaceSearch_Extension">
+                    <items>
+                        <map height="100" alignment="left" id="EqC-Rh-DGV"/>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="SoN-0Z-rG7">
+                            <connections>
+                                <action selector="zoomView:" destination="W6W-16-xOs" id="31S-TM-FBp"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="mapView" destination="EqC-Rh-DGV" id="d5T-jd-iCr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="741" y="159"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="221" y="776"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watchPlaceSearch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="776"/>
+        </scene>
+    </scenes>
+</document>

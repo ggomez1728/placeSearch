@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823EDF3C1CC80DCF00A8DC8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823EDF3A1CC80DCF00A8DC8C /* Interface.storyboard */; };
+		823EDF3E1CC80DCF00A8DC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823EDF3D1CC80DCF00A8DC8C /* Assets.xcassets */; };
+		823EDF451CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 823EDF441CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		823EDF4C1CC80DCF00A8DC8C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EDF4B1CC80DCF00A8DC8C /* InterfaceController.swift */; };
+		823EDF4E1CC80DCF00A8DC8C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EDF4D1CC80DCF00A8DC8C /* ExtensionDelegate.swift */; };
+		823EDF501CC80DCF00A8DC8C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EDF4F1CC80DCF00A8DC8C /* NotificationController.swift */; };
+		823EDF521CC80DCF00A8DC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823EDF511CC80DCF00A8DC8C /* Assets.xcassets */; };
+		823EDF561CC80DCF00A8DC8C /* watchPlaceSearch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 823EDF381CC80DCE00A8DC8C /* watchPlaceSearch.app */; };
+		823EDF691CC82FDD00A8DC8C /* routesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EDF681CC82FDD00A8DC8C /* routesInterfaceController.swift */; };
+		823EDF6C1CC850F000A8DC8C /* mapInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823EDF6B1CC850F000A8DC8C /* mapInterfaceController.swift */; };
 		824669C51CC323A100D2EAF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669C41CC323A100D2EAF1 /* AppDelegate.swift */; };
 		824669C71CC323A100D2EAF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669C61CC323A100D2EAF1 /* ViewController.swift */; };
 		824669CA1CC323A200D2EAF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824669C81CC323A200D2EAF1 /* Main.storyboard */; };
@@ -21,9 +31,30 @@
 		824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EF1CC341EB00D2EAF1 /* detailViewController.swift */; };
 		824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F11CC349B400D2EAF1 /* webViewController.swift */; };
 		824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F31CC35A5800D2EAF1 /* cameraViewController.swift */; };
+		82766D501CC93F3D00F05454 /* tableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D4F1CC93F3D00F05454 /* tableInterfaceController.swift */; };
+		82766D521CC93FFD00F05454 /* detailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D511CC93FFD00F05454 /* detailInterfaceController.swift */; };
+		82766D561CC9474800F05454 /* RouteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D551CC9474800F05454 /* RouteRowView.swift */; };
+		82766D581CC96E8700F05454 /* RouteW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D571CC96E8700F05454 /* RouteW.swift */; };
+		82766D591CC96E8700F05454 /* RouteW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D571CC96E8700F05454 /* RouteW.swift */; };
+		82766D5E1CC9ABD700F05454 /* PointRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D5D1CC9ABD700F05454 /* PointRowView.swift */; };
+		82766D5F1CC9ABD700F05454 /* PointRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D5D1CC9ABD700F05454 /* PointRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		823EDF461CC80DCF00A8DC8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824669B91CC323A000D2EAF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 823EDF431CC80DCF00A8DC8C;
+			remoteInfo = "watchPlaceSearch Extension";
+		};
+		823EDF541CC80DCF00A8DC8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 824669B91CC323A000D2EAF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 823EDF371CC80DCE00A8DC8C;
+			remoteInfo = watchPlaceSearch;
+		};
 		824669D91CC323A800D2EAF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 824669B91CC323A000D2EAF1 /* Project object */;
@@ -33,7 +64,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		823EDF5C1CC80DCF00A8DC8C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				823EDF451CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823EDF5E1CC80DCF00A8DC8C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				823EDF561CC80DCF00A8DC8C /* watchPlaceSearch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		823EDF381CC80DCE00A8DC8C /* watchPlaceSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchPlaceSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		823EDF3B1CC80DCF00A8DC8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		823EDF3D1CC80DCF00A8DC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		823EDF3F1CC80DCF00A8DC8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		823EDF441CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchPlaceSearch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		823EDF4A1CC80DCF00A8DC8C /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		823EDF4B1CC80DCF00A8DC8C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		823EDF4D1CC80DCF00A8DC8C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		823EDF4F1CC80DCF00A8DC8C /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		823EDF511CC80DCF00A8DC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		823EDF531CC80DCF00A8DC8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		823EDF5F1CC80E1B00A8DC8C /* placeSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = placeSearch.entitlements; sourceTree = "<group>"; };
+		823EDF681CC82FDD00A8DC8C /* routesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routesInterfaceController.swift; sourceTree = "<group>"; };
+		823EDF6B1CC850F000A8DC8C /* mapInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapInterfaceController.swift; sourceTree = "<group>"; };
 		824669C11CC323A000D2EAF1 /* placeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = placeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824669C41CC323A100D2EAF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824669C61CC323A100D2EAF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,9 +122,21 @@
 		824669EF1CC341EB00D2EAF1 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		824669F11CC349B400D2EAF1 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		824669F31CC35A5800D2EAF1 /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
+		82766D4F1CC93F3D00F05454 /* tableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableInterfaceController.swift; sourceTree = "<group>"; };
+		82766D511CC93FFD00F05454 /* detailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailInterfaceController.swift; sourceTree = "<group>"; };
+		82766D551CC9474800F05454 /* RouteRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRowView.swift; sourceTree = "<group>"; };
+		82766D571CC96E8700F05454 /* RouteW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteW.swift; sourceTree = "<group>"; };
+		82766D5D1CC9ABD700F05454 /* PointRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		823EDF411CC80DCF00A8DC8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		824669BE1CC323A000D2EAF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,11 +154,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		823EDF391CC80DCF00A8DC8C /* watchPlaceSearch */ = {
+			isa = PBXGroup;
+			children = (
+				823EDF3A1CC80DCF00A8DC8C /* Interface.storyboard */,
+				823EDF3D1CC80DCF00A8DC8C /* Assets.xcassets */,
+				823EDF3F1CC80DCF00A8DC8C /* Info.plist */,
+			);
+			path = watchPlaceSearch;
+			sourceTree = "<group>";
+		};
+		823EDF481CC80DCF00A8DC8C /* watchPlaceSearch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				823EDF4B1CC80DCF00A8DC8C /* InterfaceController.swift */,
+				823EDF4D1CC80DCF00A8DC8C /* ExtensionDelegate.swift */,
+				823EDF4F1CC80DCF00A8DC8C /* NotificationController.swift */,
+				823EDF511CC80DCF00A8DC8C /* Assets.xcassets */,
+				823EDF531CC80DCF00A8DC8C /* Info.plist */,
+				823EDF491CC80DCF00A8DC8C /* Supporting Files */,
+				823EDF681CC82FDD00A8DC8C /* routesInterfaceController.swift */,
+				823EDF6B1CC850F000A8DC8C /* mapInterfaceController.swift */,
+				82766D4F1CC93F3D00F05454 /* tableInterfaceController.swift */,
+				82766D511CC93FFD00F05454 /* detailInterfaceController.swift */,
+				82766D551CC9474800F05454 /* RouteRowView.swift */,
+				82766D5D1CC9ABD700F05454 /* PointRowView.swift */,
+			);
+			path = "watchPlaceSearch Extension";
+			sourceTree = "<group>";
+		};
+		823EDF491CC80DCF00A8DC8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				823EDF4A1CC80DCF00A8DC8C /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		824669B81CC323A000D2EAF1 = {
 			isa = PBXGroup;
 			children = (
 				824669C31CC323A000D2EAF1 /* placeSearch */,
 				824669DB1CC323A800D2EAF1 /* placeSearchTests */,
+				823EDF391CC80DCF00A8DC8C /* watchPlaceSearch */,
+				823EDF481CC80DCF00A8DC8C /* watchPlaceSearch Extension */,
 				824669C21CC323A000D2EAF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +207,8 @@
 			children = (
 				824669C11CC323A000D2EAF1 /* placeSearch.app */,
 				824669D81CC323A800D2EAF1 /* placeSearchTests.xctest */,
+				823EDF381CC80DCE00A8DC8C /* watchPlaceSearch.app */,
+				823EDF441CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +216,7 @@
 		824669C31CC323A000D2EAF1 /* placeSearch */ = {
 			isa = PBXGroup;
 			children = (
+				823EDF5F1CC80E1B00A8DC8C /* placeSearch.entitlements */,
 				824669C41CC323A100D2EAF1 /* AppDelegate.swift */,
 				824669ED1CC341B200D2EAF1 /* qrViewController.swift */,
 				824669C61CC323A100D2EAF1 /* ViewController.swift */,
@@ -107,6 +231,7 @@
 				824669EF1CC341EB00D2EAF1 /* detailViewController.swift */,
 				824669F11CC349B400D2EAF1 /* webViewController.swift */,
 				824669F31CC35A5800D2EAF1 /* cameraViewController.swift */,
+				82766D571CC96E8700F05454 /* RouteW.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -123,6 +248,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		823EDF371CC80DCE00A8DC8C /* watchPlaceSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823EDF5D1CC80DCF00A8DC8C /* Build configuration list for PBXNativeTarget "watchPlaceSearch" */;
+			buildPhases = (
+				823EDF361CC80DCE00A8DC8C /* Resources */,
+				823EDF5C1CC80DCF00A8DC8C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823EDF471CC80DCF00A8DC8C /* PBXTargetDependency */,
+			);
+			name = watchPlaceSearch;
+			productName = watchPlaceSearch;
+			productReference = 823EDF381CC80DCE00A8DC8C /* watchPlaceSearch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		823EDF431CC80DCF00A8DC8C /* watchPlaceSearch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 823EDF5B1CC80DCF00A8DC8C /* Build configuration list for PBXNativeTarget "watchPlaceSearch Extension" */;
+			buildPhases = (
+				823EDF401CC80DCF00A8DC8C /* Sources */,
+				823EDF411CC80DCF00A8DC8C /* Frameworks */,
+				823EDF421CC80DCF00A8DC8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchPlaceSearch Extension";
+			productName = "watchPlaceSearch Extension";
+			productReference = 823EDF441CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		824669C01CC323A000D2EAF1 /* placeSearch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 824669E11CC323A800D2EAF1 /* Build configuration list for PBXNativeTarget "placeSearch" */;
@@ -130,10 +289,12 @@
 				824669BD1CC323A000D2EAF1 /* Sources */,
 				824669BE1CC323A000D2EAF1 /* Frameworks */,
 				824669BF1CC323A000D2EAF1 /* Resources */,
+				823EDF5E1CC80DCF00A8DC8C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				823EDF551CC80DCF00A8DC8C /* PBXTargetDependency */,
 			);
 			name = placeSearch;
 			productName = placeSearch;
@@ -168,9 +329,22 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pollinion INC";
 				TargetAttributes = {
+					823EDF371CC80DCE00A8DC8C = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2TPLXJ3748;
+					};
+					823EDF431CC80DCF00A8DC8C = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2TPLXJ3748;
+					};
 					824669C01CC323A000D2EAF1 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 2TPLXJ3748;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					824669D71CC323A800D2EAF1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -194,11 +368,30 @@
 			targets = (
 				824669C01CC323A000D2EAF1 /* placeSearch */,
 				824669D71CC323A800D2EAF1 /* placeSearchTests */,
+				823EDF371CC80DCE00A8DC8C /* watchPlaceSearch */,
+				823EDF431CC80DCF00A8DC8C /* watchPlaceSearch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		823EDF361CC80DCE00A8DC8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823EDF3E1CC80DCF00A8DC8C /* Assets.xcassets in Resources */,
+				823EDF3C1CC80DCF00A8DC8C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		823EDF421CC80DCF00A8DC8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823EDF521CC80DCF00A8DC8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		824669BF1CC323A000D2EAF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,14 +412,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		823EDF401CC80DCF00A8DC8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823EDF6C1CC850F000A8DC8C /* mapInterfaceController.swift in Sources */,
+				823EDF691CC82FDD00A8DC8C /* routesInterfaceController.swift in Sources */,
+				82766D521CC93FFD00F05454 /* detailInterfaceController.swift in Sources */,
+				823EDF501CC80DCF00A8DC8C /* NotificationController.swift in Sources */,
+				82766D591CC96E8700F05454 /* RouteW.swift in Sources */,
+				82766D501CC93F3D00F05454 /* tableInterfaceController.swift in Sources */,
+				823EDF4E1CC80DCF00A8DC8C /* ExtensionDelegate.swift in Sources */,
+				823EDF4C1CC80DCF00A8DC8C /* InterfaceController.swift in Sources */,
+				82766D5F1CC9ABD700F05454 /* PointRowView.swift in Sources */,
+				82766D561CC9474800F05454 /* RouteRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		824669BD1CC323A000D2EAF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				824669C71CC323A100D2EAF1 /* ViewController.swift in Sources */,
 				824669C51CC323A100D2EAF1 /* AppDelegate.swift in Sources */,
+				82766D5E1CC9ABD700F05454 /* PointRowView.swift in Sources */,
 				824669CD1CC323A300D2EAF1 /* placeSearch.xcdatamodeld in Sources */,
 				824669EC1CC3310700D2EAF1 /* Route.swift in Sources */,
+				82766D581CC96E8700F05454 /* RouteW.swift in Sources */,
 				824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */,
 				824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */,
 				824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */,
@@ -247,6 +459,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		823EDF471CC80DCF00A8DC8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 823EDF431CC80DCF00A8DC8C /* watchPlaceSearch Extension */;
+			targetProxy = 823EDF461CC80DCF00A8DC8C /* PBXContainerItemProxy */;
+		};
+		823EDF551CC80DCF00A8DC8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 823EDF371CC80DCE00A8DC8C /* watchPlaceSearch */;
+			targetProxy = 823EDF541CC80DCF00A8DC8C /* PBXContainerItemProxy */;
+		};
 		824669DA1CC323A800D2EAF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 824669C01CC323A000D2EAF1 /* placeSearch */;
@@ -255,6 +477,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		823EDF3A1CC80DCF00A8DC8C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				823EDF3B1CC80DCF00A8DC8C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		824669C81CC323A200D2EAF1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -274,6 +504,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		823EDF571CC80DCF00A8DC8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watchPlaceSearch_Extension;
+				INFOPLIST_FILE = watchPlaceSearch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		823EDF581CC80DCF00A8DC8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = watchPlaceSearch_Extension;
+				INFOPLIST_FILE = watchPlaceSearch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		823EDF591CC80DCF00A8DC8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watchPlaceSearch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		823EDF5A1CC80DCF00A8DC8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "watchPlaceSearch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		824669DF1CC323A800D2EAF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,10 +651,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = placeSearch/placeSearch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = placeSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -372,10 +666,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = placeSearch/placeSearch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = placeSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -406,6 +704,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		823EDF5B1CC80DCF00A8DC8C /* Build configuration list for PBXNativeTarget "watchPlaceSearch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823EDF591CC80DCF00A8DC8C /* Debug */,
+				823EDF5A1CC80DCF00A8DC8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		823EDF5D1CC80DCF00A8DC8C /* Build configuration list for PBXNativeTarget "watchPlaceSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823EDF571CC80DCF00A8DC8C /* Debug */,
+				823EDF581CC80DCF00A8DC8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		824669BC1CC323A000D2EAF1 /* Build configuration list for PBXProject "placeSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -422,6 +738,7 @@
 				824669E31CC323A800D2EAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		824669E41CC323A800D2EAF1 /* Build configuration list for PBXNativeTarget "placeSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +747,7 @@
 				824669E61CC323A800D2EAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
