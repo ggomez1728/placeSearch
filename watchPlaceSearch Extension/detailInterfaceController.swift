@@ -21,7 +21,6 @@ class detailInterfaceController: WKInterfaceController {
         // Configure interface objects here.
         self.route = context as? RouteW
         self.loadDataDetail(self.route!)
-        
     }
     
     func loadDataDetail(route: RouteW){
@@ -36,7 +35,6 @@ class detailInterfaceController: WKInterfaceController {
                 row.itemLabel.setText(points[i].name!)
             }
         }
-        
     }
 
     override func willActivate() {

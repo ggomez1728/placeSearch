@@ -19,7 +19,7 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     var locationLatitude:Double?
     var locationLongitude:Double?
 
-    var route : Route? = nil
+    var route : RouteW? = nil
     
 
     var fistFocus : Bool = true
@@ -57,7 +57,7 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         */
     }
     
-    func showRoute(route : Route){
+    func showRoute(route : RouteW){
         dispatch_async(dispatch_get_main_queue()) {
             //load my position
          
@@ -103,6 +103,32 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
             }
 
         }
+    }
+    @IBAction func btnTools(sender: AnyObject) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Select Tool", message: nil, preferredStyle: .Alert)
+        
+        alert.addAction(UIAlertAction(title: "QR-Code", style: .Default, handler: { (action) -> Void in
+            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("qrViewController") as? qrViewController
+            self.navigationController?.pushViewController(nextViewController!, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Augmented reality", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Share", style: .Default, handler: { (action) -> Void in
+            let message = "Datos de referencia"
+            let mylocation = "Datos de referencia"
+
+            let objectForShared = [ message, mylocation]
+            let activityRD = UIActivityViewController(activityItems: objectForShared, applicationActivities: nil)
+            self.presentViewController(activityRD, animated: true, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func btnMyLocation() {

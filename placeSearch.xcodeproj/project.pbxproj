@@ -26,7 +26,6 @@
 		824669DD1CC323A800D2EAF1 /* placeSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669DC1CC323A800D2EAF1 /* placeSearchTests.swift */; };
 		824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E71CC3254B00D2EAF1 /* mapViewController.swift */; };
 		824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669E91CC32E8D00D2EAF1 /* tableViewController.swift */; };
-		824669EC1CC3310700D2EAF1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EB1CC3310700D2EAF1 /* Route.swift */; };
 		824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669ED1CC341B200D2EAF1 /* qrViewController.swift */; };
 		824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EF1CC341EB00D2EAF1 /* detailViewController.swift */; };
 		824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F11CC349B400D2EAF1 /* webViewController.swift */; };
@@ -38,6 +37,13 @@
 		82766D591CC96E8700F05454 /* RouteW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D571CC96E8700F05454 /* RouteW.swift */; };
 		82766D5E1CC9ABD700F05454 /* PointRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D5D1CC9ABD700F05454 /* PointRowView.swift */; };
 		82766D5F1CC9ABD700F05454 /* PointRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D5D1CC9ABD700F05454 /* PointRowView.swift */; };
+		828EE7BA1CD426B50007CBB0 /* routeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828EE7B91CD426B50007CBB0 /* routeTableViewCell.swift */; };
+		828EE7F91CD452900007CBB0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828EE7F81CD452900007CBB0 /* Event.swift */; };
+		82F7751F1CD2B3B4003C0A59 /* searchmap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82F7751E1CD2B3B3003C0A59 /* searchmap.jpg */; };
+		82F775231CD2DBB8003C0A59 /* eventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F775221CD2DBB8003C0A59 /* eventTableViewCell.swift */; };
+		82F775251CD2DCDC003C0A59 /* eventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F775241CD2DCDC003C0A59 /* eventsTableViewController.swift */; };
+		82F775271CD2FD05003C0A59 /* german.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82F775261CD2FD05003C0A59 /* german.jpg */; };
+		82F775291CD2FE4F003C0A59 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F775281CD2FE4F003C0A59 /* aboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +123,6 @@
 		824669DE1CC323A800D2EAF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824669E71CC3254B00D2EAF1 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		824669E91CC32E8D00D2EAF1 /* tableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
-		824669EB1CC3310700D2EAF1 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		824669ED1CC341B200D2EAF1 /* qrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrViewController.swift; sourceTree = "<group>"; };
 		824669EF1CC341EB00D2EAF1 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		824669F11CC349B400D2EAF1 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +132,13 @@
 		82766D551CC9474800F05454 /* RouteRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRowView.swift; sourceTree = "<group>"; };
 		82766D571CC96E8700F05454 /* RouteW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteW.swift; sourceTree = "<group>"; };
 		82766D5D1CC9ABD700F05454 /* PointRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointRowView.swift; sourceTree = "<group>"; };
+		828EE7B91CD426B50007CBB0 /* routeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routeTableViewCell.swift; sourceTree = "<group>"; };
+		828EE7F81CD452900007CBB0 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		82F7751E1CD2B3B3003C0A59 /* searchmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = searchmap.jpg; sourceTree = "<group>"; };
+		82F775221CD2DBB8003C0A59 /* eventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventTableViewCell.swift; sourceTree = "<group>"; };
+		82F775241CD2DCDC003C0A59 /* eventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventsTableViewController.swift; sourceTree = "<group>"; };
+		82F775261CD2FD05003C0A59 /* german.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = german.jpg; sourceTree = "<group>"; };
+		82F775281CD2FE4F003C0A59 /* aboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +206,8 @@
 		824669B81CC323A000D2EAF1 = {
 			isa = PBXGroup;
 			children = (
+				82F7751E1CD2B3B3003C0A59 /* searchmap.jpg */,
+				82F775261CD2FD05003C0A59 /* german.jpg */,
 				824669C31CC323A000D2EAF1 /* placeSearch */,
 				824669DB1CC323A800D2EAF1 /* placeSearchTests */,
 				823EDF391CC80DCF00A8DC8C /* watchPlaceSearch */,
@@ -227,11 +241,15 @@
 				824669CB1CC323A300D2EAF1 /* placeSearch.xcdatamodeld */,
 				824669E71CC3254B00D2EAF1 /* mapViewController.swift */,
 				824669E91CC32E8D00D2EAF1 /* tableViewController.swift */,
-				824669EB1CC3310700D2EAF1 /* Route.swift */,
 				824669EF1CC341EB00D2EAF1 /* detailViewController.swift */,
 				824669F11CC349B400D2EAF1 /* webViewController.swift */,
 				824669F31CC35A5800D2EAF1 /* cameraViewController.swift */,
 				82766D571CC96E8700F05454 /* RouteW.swift */,
+				82F775221CD2DBB8003C0A59 /* eventTableViewCell.swift */,
+				82F775241CD2DCDC003C0A59 /* eventsTableViewController.swift */,
+				82F775281CD2FE4F003C0A59 /* aboutViewController.swift */,
+				828EE7B91CD426B50007CBB0 /* routeTableViewCell.swift */,
+				828EE7F81CD452900007CBB0 /* Event.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -396,7 +414,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F7751F1CD2B3B4003C0A59 /* searchmap.jpg in Resources */,
 				824669D21CC323A300D2EAF1 /* LaunchScreen.storyboard in Resources */,
+				82F775271CD2FD05003C0A59 /* german.jpg in Resources */,
 				824669CF1CC323A300D2EAF1 /* Assets.xcassets in Resources */,
 				824669CA1CC323A200D2EAF1 /* Main.storyboard in Resources */,
 			);
@@ -436,13 +456,17 @@
 				824669C71CC323A100D2EAF1 /* ViewController.swift in Sources */,
 				824669C51CC323A100D2EAF1 /* AppDelegate.swift in Sources */,
 				82766D5E1CC9ABD700F05454 /* PointRowView.swift in Sources */,
+				828EE7BA1CD426B50007CBB0 /* routeTableViewCell.swift in Sources */,
 				824669CD1CC323A300D2EAF1 /* placeSearch.xcdatamodeld in Sources */,
-				824669EC1CC3310700D2EAF1 /* Route.swift in Sources */,
 				82766D581CC96E8700F05454 /* RouteW.swift in Sources */,
 				824669E81CC3254B00D2EAF1 /* mapViewController.swift in Sources */,
 				824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */,
+				828EE7F91CD452900007CBB0 /* Event.swift in Sources */,
 				824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */,
+				82F775231CD2DBB8003C0A59 /* eventTableViewCell.swift in Sources */,
 				824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */,
+				82F775291CD2FE4F003C0A59 /* aboutViewController.swift in Sources */,
+				82F775251CD2DCDC003C0A59 /* eventsTableViewController.swift in Sources */,
 				824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */,
 				824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */,
 			);

@@ -15,15 +15,19 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     // Our WatchConnectivity Session for communicating with the iOS app
-    var watchSession : WCSession?
-    
+     var watchSession : WCSession?
+    private var routes : Array<RouteW> = Array<RouteW>()
 
     @IBOutlet var messageLabel: WKInterfaceLabel!
     
-    /** Called on the delegate of the receiver. Will be called on startup if an applicationContext is available. */
+    /** Called on the delegate of the receiver. Will be called on startup if an applicationContext is available.
+     */
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
-        let message : String = applicationContext["message"] as! String
-        messageLabel.setText(message)
+        dispatch_async(dispatch_get_main_queue()) {
+            let name : String = applicationContext["name"] as! String
+            print(name)
+            //self.routes = data
+        }
     }
 
     override func awakeWithContext(context: AnyObject?) {
@@ -35,12 +39,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        /*
         if(WCSession.isSupported()){
             watchSession = WCSession.defaultSession()
             // Add self as a delegate of the session so we can handle messages
             watchSession!.delegate = self
             watchSession!.activateSession()
         }
+        */
     }
 
     override func didDeactivate() {

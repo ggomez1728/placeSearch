@@ -28,7 +28,7 @@ class cameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Do any additional setup after loading the view.
         if !UIImagePickerController.isSourceTypeAvailable(.Camera){
             btnCameraOutlet.enabled = false
-            let alert = UIAlertController(title: "Hardware failure", message: "La cámara no se encuentra", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Hardware failure", message: "Camera is not found", preferredStyle: .Alert)
             let actionOk = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alert.addAction(actionOk)
             self.presentViewController(alert, animated: true, completion: nil)

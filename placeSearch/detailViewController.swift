@@ -24,7 +24,7 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
 
     
     
-    var route : Route? = nil
+    var route : RouteW? = nil
     var favoritePoints : [MKMapItem] = []
     var saveButton: Bool = false
     var myImage : UIImage? = nil
@@ -72,7 +72,7 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
     
     
     // Set dates of route
-    func showDatadetail(route :Route){
+    func showDatadetail(route :RouteW){
         self.titleRoute.text = route.name
         self.showFavoritePoints(route.points)
         if route.image != nil {
@@ -124,7 +124,7 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
         if (self.saveButton == true){
             // Save Route
             if (self.titleRoute.text != ""){
-                let newRoute =  Route(name: "\(self.titleRoute.text!)", description: "Detalle", points: self.favoritePoints, image: self.myImage)
+                let newRoute =  RouteW(name: "\(self.titleRoute.text!)", description: "Detalle", points: self.favoritePoints, image: self.myImage)
                 self.saveRouteAction(newRoute)
             }
             else{
@@ -142,7 +142,7 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
         
     }
     
-    func saveRouteAction(route : Route) {
+    func saveRouteAction(route : RouteW) {
         // navigationController?.popToRootViewControllerAnimated(true)
         dispatch_async(dispatch_get_main_queue()) {
             //perform code
@@ -152,7 +152,7 @@ class detailViewController: UIViewController, UITextFieldDelegate, DestinationVi
         }
     }
     
-    func showRouteAction(route : Route) {
+    func showRouteAction(route : RouteW) {
         dispatch_async(dispatch_get_main_queue()) {
             //perform code
             let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as? mapViewController

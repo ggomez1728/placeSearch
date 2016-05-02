@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 import WatchConnectivity
 
 
@@ -18,40 +19,181 @@ class tableViewController: UITableViewController, WCSessionDelegate {
     var watchSession : WCSession?
 
     
-    private var routes : Array<Route> = Array<Route>()
-    var newRoute : Route? = nil
-    var numtest : Int = 0
+    var routes : Array<RouteW> = Array<RouteW>()
+    var newRoute : RouteW? = nil
+    var context :NSManagedObjectContext? = nil
 
-    func doSaveRouteWithData(data: Route) {
+    func doSaveRouteWithData(data: RouteW) {
         print("Guarda bien")
         // Uses the data passed back
     }
     
-    @IBAction func testeooo(sender: AnyObject) {
-        self.loadDataWatch()
+    @IBAction func moreTools(sender: AnyObject) {
+        // self.loadDataWatch()
+        let alertController = UIAlertController(title: "more tools", message: nil, preferredStyle:UIAlertControllerStyle.ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { _ in
+            
+        }
+        alertController.addAction(cancelAction)
+        
+        let eventsAction = UIAlertAction(title: "Events", style: .Default) { _ in
+            
+            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("eventsTableViewController") as? eventsTableViewController
+            self.navigationController?.pushViewController(nextViewController!, animated: true)
+        
+        }
+        alertController.addAction(eventsAction)
+        
+        let aboutAction = UIAlertAction(title: "About us", style: .Default) { _ in
+            
+            let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("aboutViewController") as? aboutViewController
+            self.navigationController?.pushViewController(nextViewController!, animated: true)
+        }
+        alertController.addAction(aboutAction)
+        self.presentViewController(alertController, animated: true, completion:{ () -> Void in
+            //your code here
+        })
+
     }
+
     
     func loadDataWatch() {
-        self.numtest++
-        let message : String = "->\(self.numtest)"
+        
+        let name : String = (self.routes.first?.name)!
+        
             do {
                 try watchSession?.updateApplicationContext(
-                    ["message" : message]
+                    ["name" : name]
                 )
             } catch let error as NSError {
                 NSLog("Updating the context failed: " + error.localizedDescription)
             }
     }
-
-
+    
+    func saveNewRouteCoreData(route: RouteW){
+        let routeEntity = NSEntityDescription.entityForName("Route", inManagedObjectContext: self.context!)
+        let requestRoute = routeEntity?.managedObjectModel.fetchRequestFromTemplateWithName("reqRoute", substitutionVariables: ["name":route.name])
+        do{
+            let routeEntity2 = try self.context?.executeFetchRequest(requestRoute!)
+            if(routeEntity2?.count>0){
+                //ya se almaceno con este nombre
+                return
+            }
+        }
+        catch{
+            
+        }
+        //guardar en la base de datos
+        let newRouteEntity = NSEntityDescription.insertNewObjectForEntityForName("Route", inManagedObjectContext: self.context!)
+        // save elements of nwe route
+        newRouteEntity.setValue(route.name, forKey: "name")
+        if route.image != nil {
+            newRouteEntity.setValue(UIImagePNGRepresentation(route.image!) , forKey: "image")
+        }
+        newRouteEntity.setValue(createFavoritePointsEntity(route.points), forKey: "has_many")
+        do{
+            try self.context!.save()
+        }
+        catch{
+            
+        }
+    }
+    
+    func createFavoritePointsEntity(points : [MKMapItem])-> Set<NSObject>{
+        var entities = Set<NSObject>()
+        for point in points{
+            let pointEntity = NSEntityDescription.insertNewObjectForEntityForName("Point", inManagedObjectContext: self.context!)
+            pointEntity.setValue(point.name, forKey: "name")
+            pointEntity.setValue(point.placemark.location!.coordinate.latitude, forKey: "latitude")
+            pointEntity.setValue(point.placemark.location!.coordinate.longitude, forKey: "longitude")
+            entities.insert(pointEntity)
+        }
+        return entities
+    }
+    
+    func LoadRoutesCoreData(){
+        let routeEntity = NSEntityDescription.entityForName("Route", inManagedObjectContext: self.context!)
+        let requestRoutes = routeEntity?.managedObjectModel.fetchRequestTemplateForName("reqRoutes")
+        do{
+            let routesEntity =  try self.context?.executeFetchRequest(requestRoutes!)
+            for readRouteEntity in routesEntity!{
+                let name = readRouteEntity.valueForKey("name") as! String
+                var image : UIImage? = nil
+                if readRouteEntity.valueForKey("image") != nil {
+                    image = UIImage(data: readRouteEntity.valueForKey("image") as! NSData)
+                }
+                
+                let pointsEntity = readRouteEntity.valueForKey("has_many") as! Set<NSObject>
+                var points = [MKMapItem]()
+                for readPointsEntity in pointsEntity{
+                    let namePoint = readPointsEntity.valueForKey("name") as! String
+                    let latitude = readPointsEntity.valueForKey("latitude") as! Double
+                    let longitude = readPointsEntity.valueForKey("longitude") as! Double
+                    
+                    let pointCoor = CLLocationCoordinate2DMake(latitude, longitude)
+                    let pointPlace = MKPlacemark(coordinate: pointCoor, addressDictionary: nil)
+                    let newPoint =  MKMapItem(placemark: pointPlace)
+                    newPoint.name = namePoint
+                    points.append(newPoint)
+                    //Falta Agregar los nuevos puntos
+                }
+                
+                let routeRead = RouteW(name: name, description: "algo", points: points, image: image)
+                
+                
+                self.routes.append(routeRead)
+            }
+        }
+        catch{
+            
+        }
+    }
+    
+    func testSaveData(){
+        
+        var points : [MKMapItem] = []
+        var point: MKMapItem!
+        
+        var puntoCoor = CLLocationCoordinate2DMake(19.359727, -99.257700)
+        var puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+        point =  MKMapItem(placemark: puntoLugar)
+        point.name = "Tecnologico de Monterrey"
+        points.append(point)
+        
+        puntoCoor = CLLocationCoordinate2DMake(19.362896, -99.268856)
+        puntoLugar =  MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+        point = MKMapItem(placemark: puntoLugar)
+        point.name = "Centro Comercial"
+        points.append(point)
+        
+        puntoCoor = CLLocationCoordinate2DMake(19.358543, -99.276304)
+        puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
+        point = MKMapItem(placemark: puntoLugar)
+        point.name = "Glorieta"
+        points.append(point)
+        
+        let testRoute = RouteW(name: "second Route", description: "test", points: points, image: nil)
+        self.saveNewRouteCoreData(testRoute)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "PlaceSearch"
         
+        self.context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        //self.testSaveData()
+
         if (newRoute != nil) {
-            self.routes.append(newRoute!)
+            
+            //self.routes.append(newRoute!)
+            self.saveNewRouteCoreData(newRoute!)
+
             print("Save new Route")
         }
+        self.LoadRoutesCoreData()
+
         /*
         * If this device can support a WatchConnectivity session,
         * obtain a session and activate.
@@ -64,7 +206,6 @@ class tableViewController: UITableViewController, WCSessionDelegate {
         * we still need to supply a delegate to activate the session
         */
         if(WCSession.isSupported()){
-            print("Soporte Watch Conect")
             watchSession = WCSession.defaultSession()
             watchSession!.delegate = self
             watchSession!.activateSession()
@@ -96,10 +237,15 @@ class tableViewController: UITableViewController, WCSessionDelegate {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellRoute", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("routeTableViewCell", forIndexPath: indexPath) as! routeTableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = self.routes[indexPath.row].name
+        cell.routeName?.text = self.routes[indexPath.row].name
+        if self.routes[indexPath.row].image != nil {
+            cell.routeImage?.image = self.routes[indexPath.row].image
+        }
+        
+        //cell.textLabel?.text = self.routes[indexPath.row].name
         return cell
     }
     
