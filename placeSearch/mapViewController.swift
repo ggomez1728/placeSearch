@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManagerDelegate  {
+class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManagerDelegate, ARDataSource  {
     
     @IBOutlet weak var mapRoute: MKMapView!
  
@@ -104,6 +104,40 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
 
         }
     }
+    
+    /*
+    *
+    */
+    
+    func startARG(){
+        let puntosDeInteres = getAnnotations(route!)
+        let arViewController = ARViewController()
+        arViewController.debugEnabled = true
+        arViewController.dataSource = self
+        arViewController.maxDistance = 0
+        arViewController.maxVisibleAnnotations = 100
+        arViewController.maxVerticalLevel = 5
+        arViewController.trackingManager.userDistanceFilter = 25
+        arViewController.trackingManager.reloadDistanceFilter = 75
+        arViewController.setAnnotations(puntosDeInteres)
+        self.presentViewController(arViewController, animated: true, completion: nil)
+    }
+    
+    private func getAnnotations(myRoute: RouteW)->Array<ARAnnotation>{
+        var annotations:[ARAnnotation] = []
+        for point in myRoute.points{
+            let annotation = ARAnnotation()
+            annotation.location = CLLocation(latitude: point.placemark.coordinate.latitude, longitude: point.placemark.coordinate.longitude)
+            annotation.title = point.name
+            annotations.append(annotation)
+        }
+        return annotations
+    }
+    
+    /*
+     *
+     */
+    
     @IBAction func btnTools(sender: AnyObject) {
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Select Tool", message: nil, preferredStyle: .Alert)
@@ -113,12 +147,12 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
             self.navigationController?.pushViewController(nextViewController!, animated: true)
         }))
         alert.addAction(UIAlertAction(title: "Augmented reality", style: .Default, handler: { (action) -> Void in
-            
-            
+            //
+            self.startARG()
         }))
-        alert.addAction(UIAlertAction(title: "Share", style: .Default, handler: { (action) -> Void in
-            let message = "Datos de referencia"
-            let mylocation = "Datos de referencia"
+        alert.addAction(UIAlertAction(title: "Share my location", style: .Default, handler: { (action) -> Void in
+            let message = "My Location"
+            let mylocation = "latitud: \(self.locationLatitude) longitud: \(self.locationLongitude)"
 
             let objectForShared = [ message, mylocation]
             let activityRD = UIActivityViewController(activityItems: objectForShared, applicationActivities: nil)
@@ -260,6 +294,15 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         anota.coordinate = punto.placemark.coordinate
         anota.title = punto.name
         mapRoute.addAnnotation(anota)
+    }
+    
+    
+    //realidad Aumentada
+    func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let myView = TestAnnotationView()
+        myView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        myView.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
+        return myView
     }
     
 }

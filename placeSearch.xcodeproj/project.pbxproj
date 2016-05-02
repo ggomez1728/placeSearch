@@ -30,6 +30,20 @@
 		824669F01CC341EB00D2EAF1 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669EF1CC341EB00D2EAF1 /* detailViewController.swift */; };
 		824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F11CC349B400D2EAF1 /* webViewController.swift */; };
 		824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824669F31CC35A5800D2EAF1 /* cameraViewController.swift */; };
+		824F1FC81CD7AB2300197EE9 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FC31CD7AB2300197EE9 /* ARAnnotation.swift */; };
+		824F1FC91CD7AB2300197EE9 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FC41CD7AB2300197EE9 /* ARAnnotationView.swift */; };
+		824F1FCA1CD7AB2300197EE9 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FC51CD7AB2300197EE9 /* ARConfiguration.swift */; };
+		824F1FCB1CD7AB2300197EE9 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FC61CD7AB2300197EE9 /* ARTrackingManager.swift */; };
+		824F1FCC1CD7AB2300197EE9 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FC71CD7AB2300197EE9 /* ARViewController.swift */; };
+		824F1FCF1CD7AB5A00197EE9 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FCE1CD7AB5A00197EE9 /* DebugMapViewController.swift */; };
+		824F1FD51CD7ABF200197EE9 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 824F1FD11CD7ABF200197EE9 /* DebugMapViewController.xib */; };
+		824F1FD61CD7ABF200197EE9 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 824F1FD21CD7ABF200197EE9 /* hdar_close.png */; };
+		824F1FD71CD7ABF200197EE9 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824F1FD31CD7ABF200197EE9 /* hdar_close@2x.png */; };
+		824F1FD81CD7ABF200197EE9 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824F1FD41CD7ABF200197EE9 /* hdar_close@3x.png */; };
+		824F1FDA1CD7ACD100197EE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F1FD91CD7ACD100197EE9 /* CoreLocation.framework */; };
+		824F1FDC1CD7ACDE00197EE9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F1FDB1CD7ACDE00197EE9 /* CoreMotion.framework */; };
+		824F1FDE1CD7ACF000197EE9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824F1FDD1CD7ACF000197EE9 /* MapKit.framework */; };
+		824F1FE21CD7B96C00197EE9 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824F1FE11CD7B96C00197EE9 /* TestAnnotationView.swift */; };
 		82766D501CC93F3D00F05454 /* tableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D4F1CC93F3D00F05454 /* tableInterfaceController.swift */; };
 		82766D521CC93FFD00F05454 /* detailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D511CC93FFD00F05454 /* detailInterfaceController.swift */; };
 		82766D561CC9474800F05454 /* RouteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766D551CC9474800F05454 /* RouteRowView.swift */; };
@@ -127,6 +141,20 @@
 		824669EF1CC341EB00D2EAF1 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		824669F11CC349B400D2EAF1 /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		824669F31CC35A5800D2EAF1 /* cameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
+		824F1FC31CD7AB2300197EE9 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		824F1FC41CD7AB2300197EE9 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		824F1FC51CD7AB2300197EE9 /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		824F1FC61CD7AB2300197EE9 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		824F1FC71CD7AB2300197EE9 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		824F1FCE1CD7AB5A00197EE9 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		824F1FD11CD7ABF200197EE9 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		824F1FD21CD7ABF200197EE9 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		824F1FD31CD7ABF200197EE9 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		824F1FD41CD7ABF200197EE9 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		824F1FD91CD7ACD100197EE9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		824F1FDB1CD7ACDE00197EE9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		824F1FDD1CD7ACF000197EE9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		824F1FE11CD7B96C00197EE9 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestAnnotationView.swift; path = "../../../../Downloads/HDAugmentedReality-master 2/HDAugmentedRealityDemo/TestAnnotationView.swift"; sourceTree = "<group>"; };
 		82766D4F1CC93F3D00F05454 /* tableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableInterfaceController.swift; sourceTree = "<group>"; };
 		82766D511CC93FFD00F05454 /* detailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailInterfaceController.swift; sourceTree = "<group>"; };
 		82766D551CC9474800F05454 /* RouteRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteRowView.swift; sourceTree = "<group>"; };
@@ -153,6 +181,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824F1FDE1CD7ACF000197EE9 /* MapKit.framework in Frameworks */,
+				824F1FDC1CD7ACDE00197EE9 /* CoreMotion.framework in Frameworks */,
+				824F1FDA1CD7ACD100197EE9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +237,9 @@
 		824669B81CC323A000D2EAF1 = {
 			isa = PBXGroup;
 			children = (
+				824F1FDD1CD7ACF000197EE9 /* MapKit.framework */,
+				824F1FDB1CD7ACDE00197EE9 /* CoreMotion.framework */,
+				824F1FD91CD7ACD100197EE9 /* CoreLocation.framework */,
 				82F7751E1CD2B3B3003C0A59 /* searchmap.jpg */,
 				82F775261CD2FD05003C0A59 /* german.jpg */,
 				824669C31CC323A000D2EAF1 /* placeSearch */,
@@ -230,6 +264,8 @@
 		824669C31CC323A000D2EAF1 /* placeSearch */ = {
 			isa = PBXGroup;
 			children = (
+				824F1FD01CD7AB9600197EE9 /* Resources */,
+				824F1FC21CD7AAD000197EE9 /* Classes */,
 				823EDF5F1CC80E1B00A8DC8C /* placeSearch.entitlements */,
 				824669C41CC323A100D2EAF1 /* AppDelegate.swift */,
 				824669ED1CC341B200D2EAF1 /* qrViewController.swift */,
@@ -250,6 +286,7 @@
 				82F775281CD2FE4F003C0A59 /* aboutViewController.swift */,
 				828EE7B91CD426B50007CBB0 /* routeTableViewCell.swift */,
 				828EE7F81CD452900007CBB0 /* Event.swift */,
+				824F1FE11CD7B96C00197EE9 /* TestAnnotationView.swift */,
 			);
 			path = placeSearch;
 			sourceTree = "<group>";
@@ -261,6 +298,38 @@
 				824669DE1CC323A800D2EAF1 /* Info.plist */,
 			);
 			path = placeSearchTests;
+			sourceTree = "<group>";
+		};
+		824F1FC21CD7AAD000197EE9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				824F1FCD1CD7AB4200197EE9 /* Debug */,
+				824F1FC31CD7AB2300197EE9 /* ARAnnotation.swift */,
+				824F1FC41CD7AB2300197EE9 /* ARAnnotationView.swift */,
+				824F1FC51CD7AB2300197EE9 /* ARConfiguration.swift */,
+				824F1FC61CD7AB2300197EE9 /* ARTrackingManager.swift */,
+				824F1FC71CD7AB2300197EE9 /* ARViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		824F1FCD1CD7AB4200197EE9 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				824F1FCE1CD7AB5A00197EE9 /* DebugMapViewController.swift */,
+			);
+			name = Debug;
+			sourceTree = "<group>";
+		};
+		824F1FD01CD7AB9600197EE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				824F1FD11CD7ABF200197EE9 /* DebugMapViewController.xib */,
+				824F1FD21CD7ABF200197EE9 /* hdar_close.png */,
+				824F1FD31CD7ABF200197EE9 /* hdar_close@2x.png */,
+				824F1FD41CD7ABF200197EE9 /* hdar_close@3x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,9 +485,13 @@
 			files = (
 				82F7751F1CD2B3B4003C0A59 /* searchmap.jpg in Resources */,
 				824669D21CC323A300D2EAF1 /* LaunchScreen.storyboard in Resources */,
+				824F1FD71CD7ABF200197EE9 /* hdar_close@2x.png in Resources */,
 				82F775271CD2FD05003C0A59 /* german.jpg in Resources */,
 				824669CF1CC323A300D2EAF1 /* Assets.xcassets in Resources */,
 				824669CA1CC323A200D2EAF1 /* Main.storyboard in Resources */,
+				824F1FD61CD7ABF200197EE9 /* hdar_close.png in Resources */,
+				824F1FD81CD7ABF200197EE9 /* hdar_close@3x.png in Resources */,
+				824F1FD51CD7ABF200197EE9 /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824F1FCC1CD7AB2300197EE9 /* ARViewController.swift in Sources */,
+				824F1FE21CD7B96C00197EE9 /* TestAnnotationView.swift in Sources */,
 				824669C71CC323A100D2EAF1 /* ViewController.swift in Sources */,
 				824669C51CC323A100D2EAF1 /* AppDelegate.swift in Sources */,
 				82766D5E1CC9ABD700F05454 /* PointRowView.swift in Sources */,
@@ -463,8 +538,13 @@
 				824669F21CC349B400D2EAF1 /* webViewController.swift in Sources */,
 				828EE7F91CD452900007CBB0 /* Event.swift in Sources */,
 				824669EE1CC341B200D2EAF1 /* qrViewController.swift in Sources */,
+				824F1FCF1CD7AB5A00197EE9 /* DebugMapViewController.swift in Sources */,
+				824F1FC91CD7AB2300197EE9 /* ARAnnotationView.swift in Sources */,
+				824F1FCB1CD7AB2300197EE9 /* ARTrackingManager.swift in Sources */,
+				824F1FC81CD7AB2300197EE9 /* ARAnnotation.swift in Sources */,
 				82F775231CD2DBB8003C0A59 /* eventTableViewCell.swift in Sources */,
 				824669F41CC35A5800D2EAF1 /* cameraViewController.swift in Sources */,
+				824F1FCA1CD7AB2300197EE9 /* ARConfiguration.swift in Sources */,
 				82F775291CD2FE4F003C0A59 /* aboutViewController.swift in Sources */,
 				82F775251CD2DCDC003C0A59 /* eventsTableViewController.swift in Sources */,
 				824669EA1CC32E8D00D2EAF1 /* tableViewController.swift in Sources */,

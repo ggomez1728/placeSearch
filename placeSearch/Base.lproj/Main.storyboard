@@ -123,9 +123,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-cq-sNg">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjV-re-leV">
                                 <rect key="frame" x="0.0" y="555" width="600" height="44"/>
                                 <items>
@@ -150,6 +147,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KBT-C6-Zzx"/>
                                 </items>
                             </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mmf-cq-sNg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-3u-O4A">
                                 <rect key="frame" x="506" y="511" width="84" height="30"/>
                                 <state key="normal" title="My Location"/>
@@ -160,15 +160,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="lyM-3u-O4A" secondAttribute="trailing" constant="-10" id="0ZL-Dv-x3v"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="top" secondItem="dLX-uP-Xaa" secondAttribute="bottom" id="0pn-uD-z5H"/>
-                            <constraint firstItem="qjV-re-leV" firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="2cm-dI-F7D"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="qjV-re-leV" secondAttribute="leading" id="4y5-6h-cFL"/>
-                            <constraint firstItem="qjV-re-leV" firstAttribute="top" secondItem="lyM-3u-O4A" secondAttribute="bottom" constant="14" id="8OM-wg-3ey"/>
-                            <constraint firstItem="A7O-cw-gOI" firstAttribute="top" secondItem="qjV-re-leV" secondAttribute="bottom" constant="1" id="H0h-QH-D52"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="bottom" secondItem="A7O-cw-gOI" secondAttribute="top" id="PN3-gm-Z7H"/>
-                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="vio-NV-fLr" secondAttribute="leading" id="Zif-ia-Nob"/>
-                            <constraint firstAttribute="trailing" secondItem="qjV-re-leV" secondAttribute="trailing" id="c1T-R0-BHq"/>
+                            <constraint firstItem="qjV-re-leV" firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="3Ho-P3-efk"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="leading" secondItem="qjV-re-leV" secondAttribute="leading" id="4B3-Dn-uPB"/>
+                            <constraint firstItem="qjV-re-leV" firstAttribute="top" secondItem="lyM-3u-O4A" secondAttribute="bottom" constant="14" id="9g8-dn-xw8"/>
+                            <constraint firstAttribute="trailing" secondItem="mmf-cq-sNg" secondAttribute="trailing" id="AfD-37-pF1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lyM-3u-O4A" secondAttribute="trailing" constant="-10" id="KDa-Me-hgb"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="bottom" secondItem="A7O-cw-gOI" secondAttribute="top" id="ZuY-zY-RZu"/>
+                            <constraint firstItem="mmf-cq-sNg" firstAttribute="top" secondItem="dLX-uP-Xaa" secondAttribute="bottom" id="n8S-FB-SdI"/>
+                            <constraint firstItem="qjV-re-leV" firstAttribute="leading" secondItem="vio-NV-fLr" secondAttribute="leading" id="seJ-ZY-cTj"/>
+                            <constraint firstItem="A7O-cw-gOI" firstAttribute="top" secondItem="qjV-re-leV" secondAttribute="bottom" constant="1" id="u0I-DD-PKS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -531,6 +531,6 @@
         <image name="searchmap.jpg" width="500" height="316"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="acX-FV-SyI"/>
+        <segue reference="nqk-W5-cDA"/>
     </inferredMetricsTieBreakers>
 </document>
