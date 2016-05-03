@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		823D5CEC1CD9185D0028E912 /* tools_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 823D5CEB1CD9185D0028E912 /* tools_icon.png */; };
 		823EDF3C1CC80DCF00A8DC8C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823EDF3A1CC80DCF00A8DC8C /* Interface.storyboard */; };
 		823EDF3E1CC80DCF00A8DC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823EDF3D1CC80DCF00A8DC8C /* Assets.xcassets */; };
 		823EDF451CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 823EDF441CC80DCF00A8DC8C /* watchPlaceSearch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -110,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		823D5CEB1CD9185D0028E912 /* tools_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tools_icon.png; sourceTree = "<group>"; };
 		823EDF381CC80DCE00A8DC8C /* watchPlaceSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchPlaceSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823EDF3B1CC80DCF00A8DC8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		823EDF3D1CC80DCF00A8DC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				824F1FDB1CD7ACDE00197EE9 /* CoreMotion.framework */,
 				824F1FD91CD7ACD100197EE9 /* CoreLocation.framework */,
 				82F7751E1CD2B3B3003C0A59 /* searchmap.jpg */,
+				823D5CEB1CD9185D0028E912 /* tools_icon.png */,
 				82F775261CD2FD05003C0A59 /* german.jpg */,
 				824669C31CC323A000D2EAF1 /* placeSearch */,
 				824669DB1CC323A800D2EAF1 /* placeSearchTests */,
@@ -483,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823D5CEC1CD9185D0028E912 /* tools_icon.png in Resources */,
 				82F7751F1CD2B3B4003C0A59 /* searchmap.jpg in Resources */,
 				824669D21CC323A300D2EAF1 /* LaunchScreen.storyboard in Resources */,
 				824F1FD71CD7ABF200197EE9 /* hdar_close@2x.png in Resources */,
@@ -759,6 +763,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = placeSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -774,6 +779,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = placeSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pollinion.placeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

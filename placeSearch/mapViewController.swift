@@ -14,6 +14,7 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     
     @IBOutlet weak var mapRoute: MKMapView!
  
+    @IBOutlet weak var btnRoutes: UIBarButtonItem!
     var pointsTemp : [MKMapItem] = []
     
     var locationLatitude:Double?
@@ -41,6 +42,9 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         myManager.desiredAccuracy = kCLLocationAccuracyBest
         myManager.requestWhenInUseAuthorization()
         myManager.startUpdatingLocation()
+        if route != nil{
+            btnRoutes.enabled = false
+        }
         /*
         var puntoCoor = CLLocationCoordinate2DMake(19.359727, -99.257700)
         var puntoLugar = MKPlacemark(coordinate: puntoCoor, addressDictionary: nil)
@@ -146,19 +150,26 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
             let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("qrViewController") as? qrViewController
             self.navigationController?.pushViewController(nextViewController!, animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "Augmented reality", style: .Default, handler: { (action) -> Void in
-            //
-            self.startARG()
-        }))
-        alert.addAction(UIAlertAction(title: "Share my location", style: .Default, handler: { (action) -> Void in
-            let message = "My Location"
-            let mylocation = "latitud: \(self.locationLatitude) longitud: \(self.locationLongitude)"
+        if route != nil{
+            alert.addAction(UIAlertAction(title: "Augmented reality", style: .Default, handler: { (action) -> Void in
+                //
+                self.startARG()
+            }))
+            alert.addAction(UIAlertAction(title: "Share my location", style: .Default, handler: { (action) -> Void in
+                let message = "My Location"
+                let mylocation = "latitud: \(self.locationLatitude) longitud: \(self.locationLongitude)"
+                var myRoutes = "My routes are: \n"
+                for point in self.route!.points{
+                    myRoutes = myRoutes + "\(point.name) \n"
+                }
+                
+                let objectForShared = [ message, mylocation, myRoutes]
+                let activityRD = UIActivityViewController(activityItems: objectForShared, applicationActivities: nil)
+                self.presentViewController(activityRD, animated: true, completion: nil)
+                
+            }))
 
-            let objectForShared = [ message, mylocation]
-            let activityRD = UIActivityViewController(activityItems: objectForShared, applicationActivities: nil)
-            self.presentViewController(activityRD, animated: true, completion: nil)
-            
-        }))
+        }
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         // 4. Present the alert.
