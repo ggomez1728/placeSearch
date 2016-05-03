@@ -157,10 +157,10 @@ class mapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
             }))
             alert.addAction(UIAlertAction(title: "Share my location", style: .Default, handler: { (action) -> Void in
                 let message = "My Location"
-                let mylocation = "latitud: \(self.locationLatitude) longitud: \(self.locationLongitude)"
+                let mylocation = "latitud: \(self.locationLatitude!) longitud: \(self.locationLongitude!)"
                 var myRoutes = "My routes are: \n"
                 for point in self.route!.points{
-                    myRoutes = myRoutes + "\(point.name) \n"
+                    myRoutes = myRoutes + "\(point.name!) \n"
                 }
                 
                 let objectForShared = [ message, mylocation, myRoutes]
